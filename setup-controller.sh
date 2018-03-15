@@ -4466,6 +4466,8 @@ wget -O /tmp/setup/OL7.vmdk https://clemson.box.com/shared/static/0txrb3ovwfm4sr
 glance image-create --name OL7 --disk-format vmdk --visibility public --container-format bare < /tmp/setup/OL7.vmdk
 
 ## For Compute Node image
+wget -O /tmp/setup/computeVM.vmdk https://clemson.box.com/shared/static/r71gbsndqcf061btugwsgcv3ezap1y58.vmdk
+glance image-create --name computeVM --disk-format vmdk --visibility public --container-format bare < /tmp/setup/computeVM.vmdk
 
 ## For Storage Node image
 
