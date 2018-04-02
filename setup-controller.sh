@@ -4462,7 +4462,7 @@ subnet_id=`openstack network show -f shell flat-lan-1-net | grep "^subnets=" | c
 #wget -O /tmp/setup/OL7.vmdk https://clemson.box.com/shared/static/5dukzod4ftj9v3g5r8q0ktxzweuj2vvw.vmdk
 
 ## For Head Node image
-wget -O /tmp/setup/OL7.vmdk https://clemson.box.com/shared/static/0txrb3ovwfm4srgury7uxqitlaqf13qo.vmdk
+wget -O /tmp/setup/OL7.vmdk https://clemson.box.com/s/cduxrker3veqmwe2zpab9rhck697ld6y.vmdk
 glance image-create --name OL7 --disk-format vmdk --visibility public --container-format bare < /tmp/setup/OL7.vmdk
 
 ## For Compute Node image
