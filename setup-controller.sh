@@ -4467,10 +4467,12 @@ glance image-create --name OL7 --disk-format vmdk --visibility public --containe
 
 ## For Compute Node image
 wget -O /tmp/setup/computeVM.vmdk https://clemson.box.com/shared/static/r71gbsndqcf061btugwsgcv3ezap1y58.vmdk
+glance image-delete $image_id
 glance image-create --name computeVM --disk-format vmdk --visibility public --container-format bare < /tmp/setup/computeVM.vmdk
 
 ## For Storage Node image
 wget -O /tmp/setup/storage.vmdk https://clemson.box.com/shared/static/3d9aithd4k7exhjru9z50eg3458frjah.vmdk
+glance image-delete $image_id
 glance image-create --name storageVM --disk-format vmdk --visibility public --container-format bare < /tmp/setup/storageVM.vmdk
 
 #Create ports
