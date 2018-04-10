@@ -4512,9 +4512,9 @@ openstack server create --flavor m1.medium --security-group $security_id --image
 rm /tmp/setup/computeVM.vmdk
 
 ## For Storage Node image
-wget -O /tmp/setup/storage.vmdk https://clemson.box.com/shared/static/3d9aithd4k7exhjru9z50eg3458frjah.vmdk
+wget -O /tmp/setup/storageVM.vmdk https://clemson.box.com/shared/static/3d9aithd4k7exhjru9z50eg3458frjah.vmdk
 glance image-delete $image_id
-glance image-create --name storageVM --disk-format vmdk --visibility public --container-format bare < /tmp/setup/storage.vmdk
+glance image-create --name storageVM --disk-format vmdk --visibility public --container-format bare < /tmp/setup/storageVM.vmdk
 
 #Storage Nodes
 #Image id
